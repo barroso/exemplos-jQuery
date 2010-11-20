@@ -1,0 +1,57 @@
+<html>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<head>
+<title>Livro</title>
+<script src="jquery-1.4.3.js"></script>
+
+<style type="text/css">
+.bar {
+	background-color: #008000;
+}
+</style>
+</head>
+<body>
+<div class="sumario">
+<p>Introdução</p>
+<p>O que é Ruby</p>
+<p>Onde encontro Ruby</p>
+
+<p>Arrumando as coisas</p>
+<p>Preparando sua fonte de consultas</p>
+
+<p>Conhecendo o básico da linguagem</p>
+<p>Variáveis</p>
+<p>Conhecendo o básico da linguagem</p>
+<p>Escopo das variaveis</p>
+</div>
+
+
+<dl id="faq">
+	<dt>What shouldn't I do to the bird?</dt>
+	<dd>Never use oils or lotions which contai</dd>
+
+	<dt>My bird is healthy. I don't need to go to a vet, do I?</dt>
+	<dd>Schedule a "well-bird of mind will be worth it.</dd>
+
+	<dt>My bird's leg is being rubbed raw by the leg band. Can I take	it off?</dt>
+	<dd>Test, especially if the leg is broken or swollen. The vet will	be.</dd>
+	<dd>No. Don't attempt this, especially if the leg is broken or	swollen. The vet will be.</dd>
+
+	<dt>How do I pull a broken blood feather?</dt>
+	<dd>This is probably the most common mishap.</dd>
+</dl>
+<script type="text/javascript">
+	jQuery(document).ready(function() {
+
+		$('#faq').find('dd').hide().end().find('dt').click(function() {
+			var resposta = $(this).next();
+			if (resposta.is(':visible')) {
+				resposta.slideUp();
+			} else {
+				resposta.slideDown();
+			}
+		});
+	});
+</script>
+</body>
+</html>

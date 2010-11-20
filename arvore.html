@@ -1,0 +1,60 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<head>
+	<script type="text/javascript" src="jquery-1.4.3.js"></script>
+	<script type="text/javascript" src="jquery.treeview.min.js"></script>
+
+	<link rel="stylesheet" href="jquery.treeview.css" type="text/css" media="screen" />
+	
+	<style type="text/css">
+		#sumario {
+			font-family: Verdana, helvetica, arial, sans-serif;
+			font-size: 68.75%;
+		}
+	</style>
+	<script type="text/javascript" >
+		$(document).ready(function() {
+			$("#sumario").treeview({
+				   collapsed: true,
+				   control:"#controle"
+				})
+			});
+	</script>
+
+</head>
+<body>
+
+	<div id="controle">
+		<a title="Fechar" href="#"><img src="images/minus.gif" />Fechar</a>
+		<a title="Expandir" href="#"><img src="images/plus.gif" />Expandir</a>
+		<a title="Inverter" href="#">Inverter</a>
+	</div>
+
+	<ul id="sumario" class="filetree">
+		<li><span class="folder">Introdução</span>
+			<ul>
+				<li><span class="file">O Ruby</span></li>
+				<li><span class="file">O que é Ruby</span></li>
+			</ul>
+		</li>
+		<li><span class="folder">Onde encontro Ruby</span>
+			<ul>
+				<li><span class="folder">Arrumando as coisas</span>
+					<ul id="folder">
+						<li><span class="file">Preparando sua fonte de consultas</span></li>
+						<li><span class="file">Preparando as coisas</span></li>
+					</ul>
+				</li>
+				<li><span class="file">Conhecendo o básico da linguagem</span></li>
+			</ul>
+		</li>
+		<li class="closed"><span class="folder">Variáveis</span>
+			<ul>
+				<li><span class="file">Conhecendo o básico da linguagem</span></li>
+			</ul>
+		</li>
+		<li><span class="file">Escopo das variaveis</span></li>
+	</ul>
+</body>
+</html>

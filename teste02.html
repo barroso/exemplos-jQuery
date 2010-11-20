@@ -1,0 +1,35 @@
+<html>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<head>
+	<title>Teste 02</title>
+	<script src="jquery-1.4.3.js"></script>
+	
+	<style type="text/css">
+		.bar {
+			background-color: #008000;
+		}
+	</style>
+</head>
+<body>
+	<div class="foo">[$('div.foo')] representa a class foo que ta dentro do div... 
+		<span>Esse texto vai ficar verde, é só clicar aqui!</span>
+	</div>
+	<div class="bla">Esse não se altera...
+		<span>fico da mesma cor</span>
+	</div>
+	<a>TESTE</a>
+	
+	<script type="text/javascript">
+		$(function() {
+			$("div.foo").click(function(e) {
+				$("span", this).addClass('bar');
+				alert(e);
+			});
+
+			$("a").click(function(i) {
+				alert("Olá mundo!" + i);
+			});
+		});
+	</script>
+</body>
+</html>

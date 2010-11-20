@@ -1,0 +1,102 @@
+<html>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<head>
+	<title>Teste 01 - Seletores</title>
+	<script src="jquery-1.4.3.js"></script>
+</head>
+<body>
+	<h1>PASSE O MOUSE sobre o texto [.mouseover(function () {...]</h1>
+	<p>
+		Testando os seletores do jQuery, sou um p, passe o mouse vou ficar vermelho [$("p")]
+	</p>
+
+	<ul id="list">
+		<li>Item 1, sou o primeiro filho, vou ficar azul [$('li:first-child')]</li>
+		<li>Item 2, sou o segundo filho do meu pai, vou ficar verde quando você passar o mouse [$('li:nth-child(2)')]</li>
+		<li>Item 3</li>
+		<li>Item 4, vou ficar vermelho, ele me acho pelo text 'Item 4' [$('li:contains("Item 4")')] </li>
+	</ul>
+
+	<div>
+		<span>Vou ficar da mesma cor, até aqui!</span>
+		<h2>Sou um h2 dentro de um div, vou ficar laranja [$('div > h2')]</h2>
+		<h3>Sou um h3, nem mudo de cor</h3>
+	</div>
+
+	<h1><p>sou o contrario do de baixo, fico vermelho por causa da regra [$("p")]</p></h1>
+	<p><h1>teste, vou ficar verde, sou um h1 imediatamente dentro de um p [$('p + h1')]</h1></p>
+
+	<select>
+		<option value="1" >maça, vou ficar vermelho $('option:even')</option>
+		<option value="2" >pera, amarelo hehe $('option:odd')</option>
+		<option value="3" >laranja, vou ficar vermelho $('option:even')</option>
+		<option value="4" >pitomba, fiquei verde sou o cara de indice 3, inicia com zero [$('option:eq(3)')]</option>
+		<option value="5" >pera, vermelho hehe $('option:even')</option>
+		<option value="6" >amarelo, vou ficar amarelo $('option:odd')</option>
+	</select>
+
+	<p>O jQuery fornece alguns atalhos (<code>input[type=radio]</code>, por exemplo):</p>
+	<ul>
+		<li>
+			<code>:input</code>: seleciona qualquer tipo de campo de formulário (input, button, textarea, select).
+		</li>
+		<li>
+			<code>:text</code>: seleciona campos com <code>type="text"</code>.
+		</li>
+		<li>
+			<code>:password</code>: seleciona campos com <code>type="password"</code>.
+		</li>
+		<li>
+			<code>:radio</code>: seleciona campos com <code>type="radio"</code>.
+		</li>
+		<li>
+			<code>:checkbox</code>: seleciona campos com <code>type="checkbox"</code>.
+		</li>
+		<li>
+			<code>:file</code>: seleciona campos com <code>type="file"</code>.
+		</li>
+		<li>
+			<code>:submit</code>: seleciona campos com <code>type="submit"</code>.
+		</li>
+		<li>
+			<code>:image</code>: seleciona campos com <code>type="image"</code>.
+		</li>
+		<li>
+			<code>:reset</code>: seleciona campos com <code>type="reset"</code>.
+		</li>
+		<li>
+			<code>:button</code>: seleciona campos com <code>type="button"</code> ou <code>&lt;button&gt;&lt;/button&gt;</code>.
+		</li>
+	</ul>
+
+	<a href="http://visualjquery.com/">Visite, visualjquery.com</a>
+
+	<script type="text/javascript">
+		$("p").mouseover(function () {
+			$(this).css("color","red");
+		});
+
+		$('li:nth-child(2)').mouseover(function () {
+			$(this).css("color","green");
+		});
+
+		$('li:first-child').mouseover(function () {
+			$(this).css("color","blue");
+		});
+
+		$('div > h2').mouseover(function () {
+			$(this).css("color","orange");
+		});
+
+		$('p + h1').mouseover(function () {
+			$(this).css("color","green");
+		});
+
+		$('option:even').css("color","red");
+		$('option:odd').css("color","yellow");
+		$('option:eq(3)').css("color","green");
+
+		$('li:contains("Item 4")').css("color","red");
+	</script>
+</body>
+</html>
